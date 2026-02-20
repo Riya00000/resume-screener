@@ -1,10 +1,12 @@
 const Groq = require('groq-sdk');
 
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY
-});
+
 
 const scoreResume = async (resumeText, jobDescription) => {
+  const groq = new Groq({
+  apiKey: process.env.GROQ_API_KEY
+});
+  
   const prompt = `
 You are an expert HR recruiter and resume screener.
 
