@@ -3,6 +3,7 @@ const Groq = require('groq-sdk');
 
 
 const scoreResume = async (resumeText, jobDescription) => {
+  console.log('GROQ KEY:', process.env.GROQ_API_KEY ? 'loaded' : 'MISSING'); // 👈 add this
   const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY
 });
